@@ -1,0 +1,21 @@
+dist: trusty
+language: node_js
+node_js:
+- '7'
+- '8'
+- '9'
+cache:
+  yarn: true
+before_script:
+- npm install -g backed-cli
+- npm install
+- backed -b
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: vandeurenglenn@gmail.com
+  api_key:
+    secure: CGmDQeKlWnUsjRN6G3rZkaleQk2wrDN6uFV/kKoP9G2Oq6s/dFT2zTK/3odKo2lnWGNtIwZM2xfuWl9oG2IniJ2r8sS8hmfA+ycUspKJ29Cp/FVj37ZkY0IiGW+1QUjkEa7c25Ii5pgQf0esDdcFb1RClFyVvyPpAsQeHzBtBoSSZLVqnRrjHHTNMhZopdiHkdLMI1IDWpdf50ABkopmuYdPKEDP51ZfvHv6VAvsBZcGddhVn4v9Ck3xN4n5r4oLuJJ2WmCg+IhJVEy/1QKGyj8PR5CRtafC90dEaozmzWjI8Ue2cVX4rSrdxG1iPawVMgjxVDE9PIEk3aiyqPh22imGDsE24crytQmjn4bzlKzGNivlazfWXtp3L4pNHl8CbKzaWiXRDVTlhZIVtEI8biBC7D/Un3a0YthLbtlsS07pwMEBnYYKh4WvTOwcBo6LeSd5J5kGmNByjIIg+mxH5k4bFyXRNSN/uiG7KRnUVljf+yJUUq9gb/w32wfUGuS69KxRGdHrdStjO3zMr9iqjoEq7mqBFpdAMSMgDtyPzNqVM2e0dZUqZ+jsnQwnhEZTPY7RAGcdgAW8kFlZjAQJmU/E2Ey44fa4im+IwDe9Lkv0t1e0pgLG/+YLfPsZrfu6ZgBK17QtyQzww/TjalTZiKa1WXKE0bMAb/P0EKZm5qk=
+  on:
+    tags: true
+    repo: crypto-io/crypto-wallet

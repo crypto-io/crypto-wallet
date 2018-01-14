@@ -1,0 +1,33 @@
+{
+  "name": "crypto-wallet",
+  "version": "0.1.0",
+  "description": "Nodejs wallet library",
+  "main": "index.js",
+  "repository": "https://github.com/crypto-io/crypto-wallet",
+  "author": "Glenn Vandeuren <vandeurenglenn@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "node test.js"
+  },
+  "backed": {
+    "bundles": [
+      {
+        "src": "src/index.js",
+        "dest": "wallet.js",
+        "format": "cjs",
+        "plugins": {
+          "commonjs": {}
+        }
+      }
+    ]
+  },
+  "dependencies": {
+    "crypto-io-utils": "^0.1.2-alpha.1",
+    "crypto-store": "^0.1.0-alpha"
+  },
+  "devDependencies": {
+    "rollup-plugin-commonjs": "^8.2.6",
+    "tape": "^4.8.0"
+  }
+}
