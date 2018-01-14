@@ -1,5 +1,5 @@
 import { encrypt, decrypt } from 'crypto-io-utils';
-import { StoreHandler, Store } from 'crypto-store';
+import { StoreHandler } from 'crypto-store';
 export * from './lib/keys.js';
 
 export class CryptoWallet extends StoreHandler {

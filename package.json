@@ -1,7 +1,7 @@
 {
-  "name": "crypto-wallet",
+  "name": "crypto-io-wallet",
   "version": "0.1.0",
-  "description": "Nodejs wallet library",
+  "description": "crypto wallet library",
   "main": "index.js",
   "repository": "https://github.com/crypto-io/crypto-wallet",
   "author": "Glenn Vandeuren <vandeurenglenn@gmail.com>",
