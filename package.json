@@ -23,8 +23,10 @@
     ]
   },
   "dependencies": {
+    "bs58": "^4.0.1",
     "crypto-io-utils": "^0.1.2-alpha.1",
-    "crypto-store": "^0.1.0-alpha"
+    "crypto-store": "^0.1.0-alpha",
+    "secp256k1": "^3.4.0"
   },
   "devDependencies": {
     "rollup-plugin-commonjs": "^8.2.6",
