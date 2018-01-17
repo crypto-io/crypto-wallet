@@ -15,8 +15,8 @@
       {
         "src": "src/index.js",
         "dest": "wallet.js",
-        "format": "iife",
-        "moduleName": "wallet",
+        "format": "cjs",
+        "moduleName": "cryptoWallet",
         "plugins": {
           "json": {},
           "node-builtins": {},

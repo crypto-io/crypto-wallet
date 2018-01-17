@@ -1,5 +1,6 @@
-(function (exports) {
 'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
 
 var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 function createCommonjsModule(fn, module) {
@@ -11656,7 +11657,7 @@ const networks = {
   }
 };
 class CryptoWallet extends store_1 {
-  constructor(keys, secret) {
+  constructor(keys = {}, secret = null) {
     super('hex');
     this.secret = secret;
     this.private = keys.private;
@@ -11674,10 +11675,10 @@ class CryptoWallet extends store_1 {
   unlock(secret) {
     return decrypt(this._cipher, secret).then(data => JSON.parse(data));
   }
-  _updateKeyPair() {
+  _updateKeyPair(keyPair) {
     this.wif = keyPair.toWIF();
     this.address = keyPair.getAddress();
-    return { wif: this.wif, public: this.address };
+    return { wif: this.wif, address: this.address };
   }
   _createRandomAddress() {
     const keyPair = ECPair.makeRandom({
@@ -11715,6 +11716,4 @@ class CryptoWallet extends store_1 {
 }
 
 exports.CryptoWallet = CryptoWallet;
-
-}((this.wallet = this.wallet || {})));
 //# sourceMappingURL=wallet.js.map
