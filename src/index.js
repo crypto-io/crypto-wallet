@@ -29,7 +29,7 @@ const networks = {
 }
 
 export class CryptoWallet extends StoreHandler {
-  constructor(keys, secret) {
+  constructor(keys = {}, secret = null) {
     super('hex');
     this.secret = secret;
     this.private = keys.private;
@@ -52,10 +52,13 @@ export class CryptoWallet extends StoreHandler {
     return decrypt(this._cipher, secret).then(data => JSON.parse(data));
   }
 
-  _updateKeyPair() {
+  /**
+   * @return {object} {wif, address}
+   */
+  _updateKeyPair(keyPair) {
     this.wif = keyPair.toWIF(); // private key in wif format
     this.address = keyPair.getAddress(); // public key
-    return { wif: this.wif, public: this.address }
+    return { wif: this.wif, address: this.address }
   }
 
   _createRandomAddress() {
