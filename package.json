@@ -1,6 +1,6 @@
 {
   "name": "crypto-io-wallet",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0",
   "description": "crypto wallet library",
   "main": "index.js",
   "repository": "https://github.com/crypto-io/crypto-wallet",
