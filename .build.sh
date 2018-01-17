@@ -1,1 +1,1 @@
-backed -b && browserify wallet.js > wallet.browser.js
+backed -b && browserify wallet.js --standalone CryptoWallet > wallet.browser.js
